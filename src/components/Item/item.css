@@ -1,0 +1,89 @@
+/* CARD https://codepen.io/gayane-gasparyan/details/jOmaBQK */
+
+@property --rotate {
+	syntax: "<angle>";
+	initial-value: 132deg;
+	inherits: false;
+}
+
+.card {
+	background: #191c29;
+	width: 300px;
+	height: 550px;
+	margin: 10px;
+	padding: 10px 3px;
+	position: relative;
+	border-radius: 6px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.5em;
+	color: white;
+	cursor: default;
+	font-family: cursive;
+}
+
+.card::before {
+	content: "";
+	width: 104%;
+	height: 102%;
+	border-radius: 8px;
+	background-image: linear-gradient(
+		var(--rotate),
+		#5ddcff,
+		#3c67e3 43%,
+		#4e00c2
+	);
+	position: absolute;
+	z-index: -1;
+	top: -1%;
+	left: -2%;
+	animation: spin 2.5s linear infinite;
+}
+
+.card::after {
+	position: absolute;
+	content: "";
+	left: 0;
+	right: 0;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	transform: scale(0.8);
+	background-image: linear-gradient(#5ddcff, #3c67e3 43%, #4e00c2);
+	opacity: 1;
+	transition: opacity 0.5s;
+	animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		--rotate: 0deg;
+	}
+	100% {
+		--rotate: 360deg;
+	}
+}
+
+.card--title {
+	width: 95%;
+	height: 50px;
+	font-size: 18px;
+}
+.card--img {
+	width: 70%;
+	height: 180px;
+}
+.card--price {
+	color: #7fd8c9;
+}
+
+.card--more {
+	text-decoration: none;
+	color: rgb(18, 240, 166);
+}

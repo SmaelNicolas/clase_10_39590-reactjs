@@ -1,0 +1,34 @@
+.container--cart {
+	width: 100%;
+	min-height: 100vh;
+	color: green;
+	padding: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 15px;
+}
+
+.cart--emptyMessageg {
+	width: 100%;
+	color: #4e00c2;
+	font-size: 60px;
+	text-align: center;
+}
+
+.cart--empty {
+	padding: 10px 45px;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 8px;
+	color: palegoldenrod;
+	background-color: #4e00c2;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.cart--empty:hover {
+	background-color: #4e00c2e0;
+	transition: background-color 0.2s ease-in-out;
+}
