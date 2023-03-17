@@ -3,6 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import "./itemCount.css";
 
 export const ItemCount = ({ item }) => {
+	//FUNCION DECLARADA EN CartContext , PARA AGREGAR UN PRODUCTO PASANDO EL Item Y LA CANTIDAD SELECCIONADA
 	const { addItem } = useContext(CartContext);
 
 	//ESTADO PARA CONTROLAR LA CANTIDAD, INICIO EN 1
@@ -36,6 +37,9 @@ export const ItemCount = ({ item }) => {
 					+
 				</button>
 			</div>
+			{/* AGREGA EL PRODUCTO CON LA CANTIDAD AL CARRITO
+				USA LA FUNCION DEL CONTEXT
+			*/}
 			<button
 				className="itemCount--buttonCart"
 				onClick={() => addItem(item, initial)}>
